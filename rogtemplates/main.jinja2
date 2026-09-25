@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+    <title>{{ s.show_setting("TITLE") }} {% block title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="keywords" content="{{ s.show_setting("KEYWORDS") }}" />
+    <meta name="description" content="{{ s.show_setting("DESCRIPTION") }}" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Start of javascript and css needed for forms -->
+    {% for reqt in js_links %}
+      <script type="text/javascript" src="/static-deform/{{ reqt }}"></script>
+    {%- endfor %}
+    {% for reqt in css_links %}
+      <link rel="stylesheet" href="/static-deform/{{ reqt }}" type="text/css" />
+    {%- endfor %}
+    <!-- End of javascript and css needed for forms -->
+    <script type="text/javascript">
+        deform.load()
+    </script>
+    <link rel="stylesheet" href="/css"
+                            type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19893623-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+
+
+<body>
+<div id="container">
+<span class="search_box">{{ w.search_html|safe }}</span>
+<div id="header"></div>
+<div id="flower"></div>
+<div id="khaki"></div> 
+<div id="navcon">
+  <div id="nav">
+	 <ul>
+    	 <!-- This variable contains the logged in user's username -->
+    	 {% set userid = w.logged_in(request) %}
+			 
+    <li><a href="#">Main</a>
+       <ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("main_menu", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+			</ul>
+    </li>
+		
+    <li><a href="#">Math</a>
+       <ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Math", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+			</ul>
+    </li>
+		
+    <li><a href="#">Computer Games</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Computer Games", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+		
+	   <li><a href="#">Sport</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Sport", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+		
+    <li><a href="#">Garden</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Garden", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+		
+		<li><a href="#">Graphics</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Graphics", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+ 
+      <li><a href="#">Python</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Python Problems", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+		
+               
+		<li><a href="#">Gallery</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Gallery", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+
+                	<li><a href="#">Contact</a>
+    	<ul>
+      	<!-- A for loop that outputs all the menu items on the main menu -->
+      	{%- for item in w.generate_menu("Contact", context, request): %}
+      	<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      	{%- endfor %}
+      </ul>
+		</li>
+    
+    <li><a href="#">User Area</a>
+                      
+    			<ul>
+      			 <!-- A for loop that outputs all the menu items on the user area menu -->
+      			 {%- for item in w.generate_menu("user_area", context, request): %}
+      			 <li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      			 {%- endfor %}
+    			</ul>
+  					 <!-- Pre-generate the admin area menu so that I can conditionally ahow it, depending on if I am logged in -->
+  					 {% set adminarea = w.generate_menu("admin_area", context, request) %}
+  					 {% if adminarea %}
+			</li>			 
+						 
+    <li><a href="#">Admin</a>
+    			<ul>
+      				<!-- A for loop that outputs all the menu items on the admin area menu -->
+      				{%- for item in adminarea: %}
+      				<li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+      				{%- endfor %}
+    			</ul>
+  					{% endif %}
+</li>	 </ul>
+  </div><!-- nav -->
+</div><!-- navcon -->
+  <div id="main_content">
+    <!-- Display the main content on the page -->
+      <div class="padding"></div>
+    {% block content %}{% endblock %}
+  </div>
+ 
+</div>
+ <div id="footer"></div>
+</body>
+</html>
