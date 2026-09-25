@@ -1,0 +1,23 @@
+ 	/* container has a background image */
+  a.player {	
+  	margin-top:40px;
+  	display:block;
+  	background:url(/img/player/splash.png) no-repeat;
+  	width:425px;
+  	height:298px;
+  	padding:0 126px 75px 127px;	
+  	text-align:center;
+  	color:#fff;
+  	text-decoration:none;
+  	cursor:pointer;
+  }
+  
+  /* splash image */
+  a.player img {
+  	margin-top:115px;
+  	border:0;	
+  }
+  
+  	a.player {
+  		margin-top:0px;		
+  	}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="240"
+   height="100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   role="button"
+   aria-pressed="false"
+   sodipodi:docname="button.svg">
+   
+   <style type="text/css"> 
+	 rect[id="ButtonBase"] { fill: red; } 
+	 svg[aria-pressed="true"] rect[id="ButtonBase"] { fill: green; } 
+	 g:hover {cursor: pointer} 
+	 g:hover rect[id="ButtonGlow"] {opacity: 0; } 
+   </style>
+   
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3011">
+      <stop
+         id="stop3015"
+         style="stop-color:#000000;stop-opacity:0"
+         offset="0">
+        <animate
+           attributeName="stop-opacity"
+           values="0;0.5;0"
+           dur="2s"
+           repeatCount="indefinite"/>
+      </stop>
+      <stop
+         id="stop3013"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3762">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3764" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3766" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3762"
+       id="linearGradient3768"
+       x1="115"
+       y1="0"
+       x2="115"
+       y2="50"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3011"
+       id="radialGradient3017"
+       cx="115"
+       cy="160"
+       fx="115"
+       fy="160"
+       r="110"
+       gradientTransform="matrix(2.6050074e-4,-0.72727272,1.5,-8.8223205e-8,-125.02996,173.63637)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  
+  <script type="text/ecmascript"> 
+    function buttonEvent(event) { 
+      if ((event.type == "click" &amp;&amp; event.button == 0) ||
+          (event.type == "keydown" &amp;&amp;
+   (event.keyCode == 32 || event.keyCode ==13))) {
+   
+		var SVGDocument = event.target.ownerDocument; 
+		var SVGRoot     = SVGDocument.documentElement;
+		var ButtonBase  = SVGDocument.getElementById("ButtonBase");
+		var Text        = SVGDocument.getElementById("Text");
+		var TextShadow  = SVGDocument.getElementById("TextShadow");
+		
+		var pressed = false; 
+		var fill = "red";
+		var text = "OFF";
+		
+		if ("false" == SVGRoot.getAttribute("aria-pressed")) { 
+          pressed = true;
+   fill = "green";
+   text = "ON";
+        }
+		SVGRoot.setAttribute("aria-pressed", pressed); 
+		ButtonBase.style.setProperty("fill", fill, "");
+		Text.firstChild.nodeValue = text; 
+		TextShadow.firstChild.nodeValue = text;
+      }
+    }
+  </script>
+  
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.89544993"
+     inkscape:cx="123.12228"
+     inkscape:cy="45.037804"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+	 onkeydown="return buttonEvent(evt);"
+	 onclick="return buttonEvent(evt);"
+     transform="translate(0,-952.36218)">
+    <rect
+       style="fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;opacity:1"
+       id="ButtonBase"
+       width="220"
+       height="80"
+       x="10"
+       y="10"
+       ry="40"
+       transform="translate(0,952.36218)" />
+    <rect
+       transform="translate(0,952.36218)"
+       ry="40"
+       y="10"
+       x="10"
+       height="80"
+       width="220"
+       id="ButtonGlow"
+       style="opacity:0.5;fill:url(#radialGradient3017);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       style="fill:url(#linearGradient3768);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 49.81579,20 140.36842,0 C 201.16216,20 210,28.837842 210,39.81579 c 0,0 0.076,0.271952 0,0.36842 C 205.75655,45.570718 200.97795,45 190,45 L 50,45 c -10.977948,0 -20,6.162158 -20,-4.81579 0,0 -0.047,-0.254961 0,-0.36842 C 33.574743,31.185598 38.837842,20 49.81579,20 z"
+       id="ButtonHighlight"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssasssas"
+       transform="translate(0,952.36218)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3801"
+       y="1014.3622"
+       x="40.000149"
+       style="font-size:32px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="1014.3622"
+         x="40.000149"
+         id="TextShadow"
+         sodipodi:role="line">PRESS ME</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="40"
+       y="1012.3622"
+       id="text3797"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="Text"
+         x="40"
+         y="1012.3622">PRESS ME</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="111.39651"
+       y="-25.355978"
+       id="text3793"
+       sodipodi:linespacing="125%"
+       transform="translate(0,952.36218)"><tspan
+         sodipodi:role="line"
+         id="tspan3795"
+         x="111.39651"
+         y="-25.355978">  </tspan></text>
+  </g>
+</svg>

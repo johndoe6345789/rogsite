@@ -1,0 +1,48 @@
+PC Information Report
+Generated using PC Information Application by Shane Turner
+System Information
+
+System Manufacturer:System manufacturer
+System Model:System Product Name
+System Type:x64-based PC
+
+Operating System Information
+
+Operating System Name:Microsoft Windows 7 Ultimate |C:\Windows|\Device\Harddisk1\Partition2
+Build:7601(Multiprocessor Free)
+Service Pack:1.0
+Status: OK
+
+Memory Information
+
+Total/Free Physical Memory (in GB):4.00/2.40
+
+Graphics Card Information
+
+Graphics Card 1
+Graphics Card:NVIDIA GeForce 8800 GTS
+Driver Version:8.17.12.8026
+Date of current driver:20110803000000.000000-000
+Video Memory:0.31 GB (320.00 MB)
+
+Processor Information
+
+Number of Logical Processors: 2
+Processor:Intel(R) Core(TM)2 CPU          6320  @ 1.86GHz
+Current Clock Speed:1.58 Ghz
+Maximum Clock Speed:1.86 Ghz
+External Clock Speed (If present):0.30 Ghz
+Processor Type:64 Bit
+Processor Status:OK
+Processor information can be affected by power management and certain processor features.
+
+DirectX and Drive Information
+
+Detected DirectX version: (This may not match any expected values) 4.09.00.0904
+Drive Information:
+Drive C:\ : 335.72GB Free ( 931.41 GB Capacity after formatting)
+Drive D:\ : 39.53GB Free ( 149.05 GB Capacity after formatting)
+Drive G:\ : 0.89GB Free ( 3.05 GB Capacity after formatting)
+Drive X:\ : 76.41GB Free ( 1,375.34 GB Capacity after formatting)
+Drive Y:\ : 285.96GB Free ( 1,375.34 GB Capacity after formatting)
+Drive Z:\ : 22.97GB Free ( 1,375.34 GB Capacity after formatting)

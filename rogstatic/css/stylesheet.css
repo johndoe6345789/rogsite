@@ -1,0 +1,25 @@
+/* CSS Document */
+
+.bodyb {
+  background: url(pictures/stone.gif);
+  color: black;
+	text-align: center;
+  }
+.centreitem {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+.centreitema {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+.bodya {
+  background-color:#ffffcc;
+  color:#003300;
+  margin-left: auto;
+margin-right: auto;
+text-align: left;
+  }
+ 

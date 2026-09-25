@@ -1,0 +1,88 @@
+﻿
+kuid                                    <kuid:490249:100069>
+username                                "log fence4"
+trainz-build                            3.4
+category-class                          "SF"
+kind                                    "track"
+istrack                                 0
+
+thumbnails
+{
+  0
+  {
+    image                               "thumbnail.jpg"
+    width                               240
+    height                              180
+  }
+}
+
+mesh-table
+{
+  mainlod0f
+  {
+    mesh                                "mainlod0.im"
+    auto-create                         1
+  }
+  
+  mainlod1f
+  {
+    mesh                                "mainlod1.im"
+    auto-create                         1
+  }
+  
+  startlod0f
+  {
+    mesh                                "startlod0.im"
+    auto-create                         1
+  }
+  
+  startlod1f
+  {
+    mesh                                "startlod1.im"
+    auto-create                         1
+  }
+}
+
+track
+{
+  mesh-length                           3
+  
+  track-lod-tree
+  {
+    lod-distance                        250
+    
+    high-detail
+    {
+      mesh                              "mainlod0f"
+    }
+    
+    low-detail
+    {
+      mesh                              "mainlod1f"
+    }
+  }
+}
+
+endcap-prev
+{
+  mesh-length                           0.2
+  
+  track-lod-tree
+  {
+    lod-distance                        250
+    
+    high-detail
+    {
+      mesh                              "startlod0f"
+    }
+    
+    low-detail
+    {
+      mesh                              "startlod1f"
+    }
+  }
+}
+
+kuid-table
+{
+}
